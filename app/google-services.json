@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057517075448",
+    "project_id": "ocean-guard-45224",
+    "storage_bucket": "ocean-guard-45224.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057517075448:android:49205692eea2dbedbbb40d",
+        "android_client_info": {
+          "package_name": "com.greenconect.oceanguard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTUiX8NWsun8UQDv2Z0ZVikQS4OnSSvIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

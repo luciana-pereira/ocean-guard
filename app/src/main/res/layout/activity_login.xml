@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    android:scaleType="fitXY"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundTint="#839D84">
+
+        <Button
+            android:id="@+id/buttonIncreaseTextSize"
+            style="@style/RoundedButton"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/button_increase_text_size"
+            android:text="@string/b"
+            app:layout_constraintEnd_toStartOf="@+id/buttonDecreaseTextSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonDecreaseTextSize"
+            style="@style/RoundedButton"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/rounded_button"
+            android:contentDescription="@string/button_decrease_text_size"
+            android:text="@string/a"
+            app:layout_constraintStart_toEndOf="@+id/buttonIncreaseTextSize"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/emailLogin"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="164dp"
+            android:layout_marginEnd="100dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/email_hint"
+            android:importantForAccessibility="yes"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonDecreaseTextSize"
+            tools:ignore="VisualLintTextFieldSize,DuplicateClickableBoundsCheck" />
+
+        <EditText
+            android:id="@+id/passwordLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="100dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/password_hint"
+            android:importantForAccessibility="yes"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailLogin"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="100dp"
+            android:backgroundTint="#5DD2CE"
+            android:contentDescription="@string/login_button_description"
+            android:text="@string/login"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#3E2723"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordLogin"
+            tools:ignore="VisualLintButtonSize" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/register_link_description"
+            android:focusable="true"
+            android:minHeight="10dp"
+            android:text="Ainda não tem conta?"
+            android:textAlignment="center"
+            android:textColor="#0D1010"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/linkRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:clickable="true"
+            android:contentDescription="@string/register_link_description"
+            android:focusable="true"
+            android:text="Cadastre-se"
+            android:textAlignment="center"
+            android:textColor="#F2F8F8"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

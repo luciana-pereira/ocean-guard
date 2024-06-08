@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Ocean Guard</string>
+    <string name="email_hint">Digite seu e-mail</string>
+    <string name="password_hint">Digite sua senha</string>
+    <string name="button_decrease_text_size">Diminuir Tamanho do Texto</string>
+    <string name="button_increase_text_size">Aumentar Tamanho do Texto</string>
+    <string name="logo_description">Logo do Ocean Guard, que consiste do oceano e um farol no meio.</string>
+    <string name="a"><b>A-</b></string>
+    <string name="b"><b>A+</b></string>
+    <string name="login">Login</string>
+    <string name="feminino">Feminino</string>
+    <string name="masculino">Masculino</string>
+    <string name="inserir_foto">Inserir foto</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="selecione_o_sexo_biol_gico">Selecione o sexo biológico?</string>
+    <string name="nome">Nome</string>
+    <string name="data_de_nascimento">Data de nascimento</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="e_mail">E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="todo">Visualização previa da imagem selecionada para upload</string>
+    <string name="link_login">Já possui uma conta? <b>Faça login</b></string>
+    <string name="link_register">Ainda não tem conta? <b>Cadastre-se</b></string>
+    <string name="privacy_policy_text">Ao se cadastrar você concorda com a nossa <b>política de privacidade</b>.</string>
+    <string name="login_button_description">Clique neste botão para fazer login com seu email e senha</string>
+    <string name="register_link_description">Clique neste link para se cadastrar, caso ainda não possua conta no aplicativo</string>
+    <string name="user_types_text">Selecione uma das opções abaixo, para realizar o cadastro.</string>
+    <string name="user_text">Preencha os campos abaixo, para concluir o cadastro.</string>
+    <string name="ocean_guard">Ocean Guard</string>
+</resources>

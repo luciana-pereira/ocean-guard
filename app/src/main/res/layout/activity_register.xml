@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".RegisterActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_editor_absoluteX="0dp"
+        app:layout_editor_absoluteY="27dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/buttonIncreaseTextSize"
+                    style="@style/RoundedButton"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/button_increase_text_size"
+                    android:text="@string/b"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/buttonDecreaseTextSize"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonDecreaseTextSize"
+                    style="@style/RoundedButton"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/button_decrease_text_size"
+                    android:text="@string/a"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/imageView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/person" />
+
+                <Button
+                    android:id="@+id/buttonChooseImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageView"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:backgroundTint="#5ED3C5"
+                    android:text="@string/inserir_foto"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#3E2723"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/userTypes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/buttonChooseImage"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/user_text"
+                    android:textAlignment="center"
+                    android:textColor="#040404" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/nome"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:textColor="#040404"/>
+
+            <EditText
+                android:id="@+id/editTextSobrenome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/sobrenome"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:autofillHints=""
+                android:textColor="#040404"/>
+
+            <EditText
+                android:id="@+id/emailRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/e_mail"
+                android:inputType="textWebEmailAddress"
+                android:minHeight="48dp"
+                android:autofillHints=""
+                android:textColor="#040404"/>
+
+            <EditText
+                android:id="@+id/passwordRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="@string/senha"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:autofillHints=""
+                android:textColor="#040404"/>
+
+            <TextView
+                android:id="@+id/editTextBiologicalSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/selecione_o_sexo_biol_gico"
+                android:textColor="#040404" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupBiologicalSex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="180dp"
+                    android:text="@string/feminino"
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:textColor="#040404"/>
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/masculino"
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:textColor="#040404"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/data_de_nascimento"
+                android:inputType="date"
+                android:minHeight="48dp"
+                android:textColor="#040404"/>
+
+            <CheckBox
+                android:id="@+id/checkBoxPrivacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/privacy_policy_text" />
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#5ED3C5"
+                android:enabled="true"
+                android:linksClickable="true"
+                android:text="@string/cadastrar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="#3E2723"
+                android:textSize="17sp"
+                tools:ignore="VisualLintButtonSize" />
+
+            <TextView
+                android:id="@+id/linkLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp"
+                android:linksClickable="true"
+                android:text="@string/link_login"
+                android:textAlignment="center"
+                android:textColor="#0B0A0A" />
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
