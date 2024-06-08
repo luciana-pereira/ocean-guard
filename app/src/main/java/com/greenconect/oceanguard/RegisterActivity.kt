@@ -61,6 +61,7 @@ class RegisterActivity : AppCompatActivity() {
         storageReference = storage.reference
     }
 
+    // Inicializa o componentes de tela
     private fun initializeComponents() {
         emailRegister = findViewById(R.id.emailRegister)
         passwordRegister = findViewById(R.id.passwordRegister)

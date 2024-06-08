@@ -27,4 +27,5 @@
     <string name="user_types_text">Selecione uma das opções abaixo, para realizar o cadastro.</string>
     <string name="user_text">Preencha os campos abaixo, para concluir o cadastro.</string>
     <string name="ocean_guard">Ocean Guard</string>
+    <string name="descricao_da_atividade_a_ser_reportada">Descrição da atividade a ser reportada</string>
 </resources>

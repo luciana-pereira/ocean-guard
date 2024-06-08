@@ -1,4 +1,4 @@
-package com.greenconect.oceanguard.data
+package com.greenconect.oceanguard.data.network
 
 import com.greenconect.oceanguard.data.model.FishingData
 import retrofit2.Response

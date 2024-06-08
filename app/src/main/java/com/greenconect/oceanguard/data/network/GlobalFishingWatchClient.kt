@@ -1,6 +1,5 @@
 package com.greenconect.oceanguard.data.network
 
-import com.greenconect.oceanguard.data.GlobalFishingWatchApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
