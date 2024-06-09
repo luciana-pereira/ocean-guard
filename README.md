@@ -85,9 +85,6 @@ Para rodar a aplicação e necessario incluir as chaves da API.
 
 Ex:
 ```
-const val SUPABASE_URL = "https://seu-url.supabase.co"
-const val SUPABASE_KEY = "sua-chave-supabase"
-
 const val FISHING_API_URL = "https://api.fishingdata.com"
 ```
 
