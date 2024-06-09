@@ -3,36 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="@drawable/background_botton"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReportIllegalActivity">
 
-    <EditText
-        android:id="@+id/editTextDescription"
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="400dp"
-        android:hint="@string/descricao_da_atividade_a_ser_reportada"
+        android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/buttonAddImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Anexar Imagem"
-        app:layout_constraintTop_toBottomOf="@id/editTextDescription"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <Button
-        android:id="@+id/buttonSendEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enviar"
-        app:layout_constraintTop_toBottomOf="@id/buttonAddImage"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp" />
+            <TextView
+                android:id="@+id/textViewInstructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Por favor, descreva a atividade ilegal e anexe as imagens, se necessário."
+                android:textColor="@color/black"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_white_area"
+                android:hint="@string/descricao_da_atividade_a_ser_reportada"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/buttonAddImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Anexar Imagem"
+                android:padding="10dp"
+                android:background="@drawable/btn_blue_green"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <Button
+                android:id="@+id/buttonSendEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Enviar"
+                android:background="@drawable/btn_blue_green"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

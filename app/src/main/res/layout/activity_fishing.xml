@@ -1,64 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".FishingActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FishingActivity">
 
-<!-- MapView para exibir o map -->
-<com.google.android.gms.maps.MapView
-    android:id="@+id/mapView"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toTopOf="@id/recyclerView"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_marginBottom="8dp"
-    android:layout_marginTop="8dp" />
-
-<!-- RecyclerView para listar atividades de pescadetectadas-->
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/recyclerView"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    app:layout_constraintTop_toBottomOf="@id/mapView"
-    app:layout_constraintBottom_toTopOf="@id/buttonLayout"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_marginBottom="8dp" />
-
-    <!-- Layout horizontal para os botões -->
-    <LinearLayout
-        android:id="@+id/buttonLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="8dp">
-        <Button
-            android:id="@+id/buttonReport"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Denunciar" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <Button
-            android:id="@+id/buttonCapture"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Capturar" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/buttonBack"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Voltar" />
-    </LinearLayout>
+            <!-- MapView para exibir o map -->
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp" />
 
+            <!-- RecyclerView para listar atividades de pesca detectadas -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Layout horizontal para os botões -->
+            <LinearLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="8dp">
+
+                <Button
+                    android:id="@+id/buttonReport"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_blue_green"
+                    android:text="Denunciar"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <Button
+                    android:id="@+id/buttonBack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_blue_green"
+                    android:text="Voltar"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

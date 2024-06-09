@@ -2,46 +2,96 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_botton"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReportActivity">
 
-    <EditText
-        android:id="@+id/speciesName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nome da Espécie"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="16dp" />
-
-    <EditText
-        android:id="@+id/description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Descrição"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speciesName"
-        android:layout_margin="16dp" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <Button
-        android:id="@+id/selectImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selecionar Imagem"
-        app:layout_constraintTop_toBottomOf="@+id/description"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <Button
-        android:id="@+id/submitReportButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enviar Relatório"
-        app:layout_constraintTop_toBottomOf="@+id/selectImageButton"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp" />
+            <TextView
+                android:id="@+id/textViewSpeciesName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome da Espécie:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <EditText
+                android:id="@+id/speciesName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_white_area"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descreva detalhadamente para encaminhar a denuncia:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:hint="Descrição"
+                android:background="@drawable/btn_white_area"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/selectImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Selecionar Imagem"
+                android:background="@drawable/btn_blue_green"
+                android:layout_margin="4dp"
+                android:layout_gravity="start"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+
+            <Button
+                android:id="@+id/submitReportButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Enviar Relatório"
+                android:background="@drawable/btn_blue_green"
+                android:layout_margin="4dp"
+                android:layout_gravity="start"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -71,9 +71,9 @@
                     android:layout_marginEnd="0dp"
                     android:backgroundTint="#5ED3C5"
                     android:text="@string/inserir_foto"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="#3E2723"
-                    android:textSize="17sp" />
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:id="@+id/userTypes"
@@ -199,10 +199,10 @@
                 android:enabled="true"
                 android:linksClickable="true"
                 android:text="@string/cadastrar"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="#3E2723"
-                android:textSize="17sp"
-                tools:ignore="VisualLintButtonSize" />
+                tools:ignore="VisualLintButtonSize"
+                android:textSize="14sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             <TextView
                 android:id="@+id/linkLogin"

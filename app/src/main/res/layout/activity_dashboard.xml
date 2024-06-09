@@ -7,127 +7,250 @@
     android:background="@drawable/background_dashboard1"
     tools:context=".HomeActivity">
 
-    <ImageView
-        android:id="@+id/userProfileImage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="16dp"
-        android:padding="2dp"
-        android:background="@drawable/rounded_image"
-        android:src="@drawable/person"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="10dp"
-        android:text="Nome do Usuário"
-        android:textSize="18sp"
-        android:textFontWeight="500"
-        app:layout_constraintStart_toEndOf="@+id/userProfileImage"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/editProfileButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="#5DD2CE"
-        android:layout_marginLeft="10dp"
-        android:text="Editar Perfil"
-        app:layout_constraintStart_toEndOf="@+id/userProfileImage"
-        app:layout_constraintTop_toBottomOf="@+id/userName" />
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userProfileImage" />
-
-    <LinearLayout
-        android:id="@+id/firstRowLayout"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="200dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPager">
-
-        <Button
-            android:id="@+id/report"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/white_top_buttons"
-            android:drawableBottom="@mipmap/ic_launcher_foreground"
-            android:text="Reporta espécies em perigo" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <Button
-            android:id="@+id/monitoring"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/white_top_buttons"
-            android:layout_weight="1"
-            android:text="Monitoramento da pesca" />
+            <ImageView
+                android:id="@+id/userProfileImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                android:padding="2dp"
+                android:background="@drawable/rounded_image"
+                android:src="@drawable/person"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/communities"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/white_top_buttons"
-            android:layout_weight="1"
-            android:text="Comunidades" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Nome do Usuário"
+                android:textSize="18sp"
+                android:textFontWeight="500"
+                app:layout_constraintStart_toEndOf="@+id/userProfileImage"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/secondRowLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstRowLayout">
+            <Button
+                android:id="@+id/editProfileButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#5DD2CE"
+                android:layout_marginLeft="10dp"
+                android:text="Editar Perfil"
+                app:layout_constraintStart_toEndOf="@+id/userProfileImage"
+                app:layout_constraintTop_toBottomOf="@+id/userName" />
 
-        <Button
-            android:id="@+id/news"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/white_top_buttons"
-            android:layout_weight="1"
-            android:text="noticias" />
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userProfileImage" />
 
-        <Button
-            android:id="@+id/alert"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/white_top_buttons"
-            android:layout_weight="1"
-            android:text="Alertas" />
 
-        <Button
-            android:id="@+id/events"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/white_top_buttons"
-            android:layout_weight="1"
-            android:text="Eventos" />
-    </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/firstRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/report"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_blue_green"
+                    android:drawableTop="@drawable/notification"
+                    android:text="Reporta espécies em perigo"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/reportDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Descrição"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:textSize="14sp"
+                android:textAppearance="?android:attr/textAppearanceMedium">
+
+                <Button
+                    android:id="@+id/monitoring"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_blue_green"
+                    android:drawableTop="@drawable/notification"
+                    android:text="Monitoramento da pesca"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/textMonitoring"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Descrição"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/threeRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/communities"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_blue_green"
+                    android:drawableTop="@drawable/notification"
+                    android:text="Comunidades"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/textCommunities"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Descrição"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/fourRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/news"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_blue_green"
+                    android:drawableTop="@drawable/notification"
+                    android:text="Noticias"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/textNews"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Descrição"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fiveRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/alert"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_blue_green"
+                    android:drawableTop="@drawable/voice_call"
+                    android:text="Alertas"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/textAlert"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Descrição"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sixRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/events"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_blue_green"
+                    android:drawableTop="@drawable/video_call"
+                    android:text="Eventos"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/textEvents"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Descrição"
+                    android:textSize="14sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

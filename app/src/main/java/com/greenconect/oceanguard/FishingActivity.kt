@@ -32,7 +32,7 @@ class FishingActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mapView: MapView
     private lateinit var googleMap: GoogleMap
     private lateinit var recyclerView: RecyclerView
-    private lateinit var captureButton: Button
+    //private lateinit var captureButton: Button
     private lateinit var reportButton: Button
     private lateinit var backButton: Button
     private lateinit var capturedImageUri: Uri
@@ -56,11 +56,11 @@ class FishingActivity : AppCompatActivity(), OnMapReadyCallback {
         recyclerView.adapter = adapter
 
         // Inicialização dos botões
-        captureButton = findViewById(R.id.buttonCapture)
+        //captureButton = findViewById(R.id.buttonCapture)
         reportButton = findViewById(R.id.buttonReport)
         backButton = findViewById(R.id.buttonBack)
 
-        captureButton.setOnClickListener { dispatchTakePictureIntent() }
+        //captureButton.setOnClickListener { dispatchTakePictureIntent() }
         reportButton.setOnClickListener { openReportActivity() }
         backButton.setOnClickListener { finish() }
     }
