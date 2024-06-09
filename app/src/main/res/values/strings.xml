@@ -28,4 +28,8 @@
     <string name="user_text">Preencha os campos abaixo, para concluir o cadastro.</string>
     <string name="ocean_guard">Ocean Guard</string>
     <string name="descricao_da_atividade_a_ser_reportada">Descrição da atividade a ser reportada</string>
+    <string name="nome_do_usuario">Nome do Usuário</string>
+    <string name="imagem_de_perfil_do_usuario">Imagem de perfil do usuario</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="reporta_especies_em_perigo">Reporta espécies em perigo</string>
 </resources>

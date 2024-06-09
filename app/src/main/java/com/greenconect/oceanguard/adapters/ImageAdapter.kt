@@ -6,24 +6,28 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.greenconect.oceanguard.R
+import com.greenconect.oceanguard.utils.ImageUtils
 
+class ImageAdapter(private val images: IntArray) : RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {
 
-class ImageAdapter(private val images: IntArray) : RecyclerView.Adapter<ImageAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.image_card, parent, false)
-        return ViewHolder(view)
+    class ImageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val imageView: ImageView = view.findViewById(R.id.imageView)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.imageView.setImageResource(images[position])
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.image_card, parent, false)
+        return ImageViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
+        val context = holder.itemView.context
+        val resources = context.resources
+        val bitmap = ImageUtils.decodeSampledBitmapFromResource(resources, images[position], 100, 100)
+        holder.imageView.setImageBitmap(bitmap)
     }
 
     override fun getItemCount(): Int {
         return images.size
-    }
-
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imageView: ImageView = itemView.findViewById(R.id.imageView)
     }
 }

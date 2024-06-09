@@ -68,8 +68,8 @@ class FishingActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun fetchDataAndDisplay() {
         // Implemente a chamada da API para buscar dados de atividades
         // Para demonstração, estamos adicionando dados simulados
-        activities.add(Activity("Fishing", "2023-01-01T12:00:00Z", 37.7749, -122.4194))
-        activities.add(Activity("Illegal Fishing", "2023-01-02T15:00:00Z", 34.0522, -118.2437))
+        activities.add(Activity("Pesca legal", "2023-01-01T12:00:00Z", 37.7749, -122.4194))
+        activities.add(Activity("Pesca Ilegal", "2023-01-02T15:00:00Z", 34.0522, -118.2437))
 
         // Notifica o adaptador sobre alterações de dados
         recyclerView.adapter?.notifyDataSetChanged()

@@ -33,11 +33,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="Nome do Usuário"
-                android:textSize="18sp"
+                android:text="@string/nome_do_usuario"
                 android:textFontWeight="500"
                 app:layout_constraintStart_toEndOf="@+id/userProfileImage"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="18sp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             <Button
                 android:id="@+id/editProfileButton"
@@ -48,7 +49,10 @@
                 android:layout_marginLeft="10dp"
                 android:text="Editar Perfil"
                 app:layout_constraintStart_toEndOf="@+id/userProfileImage"
-                app:layout_constraintTop_toBottomOf="@+id/userName" />
+                app:layout_constraintTop_toBottomOf="@+id/userName"
+                android:textSize="14sp"
+                android:textFontWeight="500"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
@@ -72,22 +76,24 @@
                     android:id="@+id/report"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginEnd="10dp"
-                    android:padding="10dp"
+                    android:layout_weight="1"
                     android:background="@drawable/btn_blue_green"
-                    android:drawableTop="@drawable/notification"
+                    android:drawableTop="@mipmap/ic_species_foreground"
+                    android:padding="10dp"
                     android:text="Reporta espécies em perigo"
-                    android:textSize="14sp"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textFontWeight="500"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/reportDescription"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="Descrição"
+                    android:text="Ajude-nos a identificar e relatar espécies marinhas em risco de extinção para preservação."
                     android:textSize="14sp"
+                    android:textFontWeight="500"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             </LinearLayout>
@@ -109,8 +115,9 @@
                     android:layout_marginEnd="10dp"
                     android:padding="10dp"
                     android:background="@drawable/btn_blue_green"
-                    android:drawableTop="@drawable/notification"
+                    android:drawableTop="@mipmap/species_one_round"
                     android:text="Monitoramento da pesca"
+                    android:textFontWeight="500"
                     android:textSize="14sp"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
@@ -119,8 +126,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="Descrição"
+                    android:text="Monitore atividades de pesca para garantir práticas sustentáveis e proteger a vida marinha."
                     android:textSize="14sp"
+                    android:textFontWeight="500"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             </LinearLayout>
@@ -140,8 +148,9 @@
                     android:layout_marginEnd="10dp"
                     android:padding="10dp"
                     android:background="@drawable/btn_blue_green"
-                    android:drawableTop="@drawable/notification"
+                    android:drawableTop="@drawable/cat2"
                     android:text="Comunidades"
+                    android:textFontWeight="500"
                     android:textSize="14sp"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
@@ -150,8 +159,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="Descrição"
+                    android:text="Conecte-se com outras pessoas dedicadas à preservação dos oceanos e compartilhe informações."
                     android:textSize="14sp"
+                    android:textFontWeight="500"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             </LinearLayout>
@@ -173,7 +183,8 @@
                     android:padding="10dp"
                     android:background="@drawable/btn_blue_green"
                     android:drawableTop="@drawable/notification"
-                    android:text="Noticias"
+                    android:text="Notícias"
+                    android:textFontWeight="500"
                     android:textSize="14sp"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
@@ -182,8 +193,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="Descrição"
+                    android:text="Fique atualizado com as últimas notícias e avanços na preservação dos oceanos."
                     android:textSize="14sp"
+                    android:textFontWeight="500"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             </LinearLayout>
@@ -205,6 +217,7 @@
                     android:background="@drawable/btn_blue_green"
                     android:drawableTop="@drawable/voice_call"
                     android:text="Alertas"
+                    android:textFontWeight="500"
                     android:textSize="14sp"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
@@ -213,8 +226,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="Descrição"
+                    android:text="Receba alertas em tempo real sobre situações críticas que afetam os oceanos."
                     android:textSize="14sp"
+                    android:textFontWeight="500"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             </LinearLayout>
@@ -236,6 +250,7 @@
                     android:background="@drawable/btn_blue_green"
                     android:drawableTop="@drawable/video_call"
                     android:text="Eventos"
+                    android:textFontWeight="500"
                     android:textSize="14sp"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
@@ -244,8 +259,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:text="Descrição"
+                    android:text="Participe de eventos e campanhas de conscientização para a preservação dos oceanos."
                     android:textSize="14sp"
+                    android:textFontWeight="500"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
 
             </LinearLayout>

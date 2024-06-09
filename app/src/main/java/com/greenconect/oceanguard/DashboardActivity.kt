@@ -19,7 +19,7 @@ class DashboardActivity : AppCompatActivity() {
 
     private var viewPager: ViewPager2? = null
     private val images =
-        intArrayOf(R.drawable.background1, R.drawable.background1, R.drawable.background1, R.drawable.background1)
+        intArrayOf(R.drawable.banner_one, R.drawable.banner_two)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
