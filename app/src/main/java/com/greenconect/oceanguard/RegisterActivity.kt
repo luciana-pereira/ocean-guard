@@ -266,8 +266,8 @@ class RegisterActivity : AppCompatActivity() {
                     } else {
                         Log.e("SignUpActivity", "Erro ao criar usuário: ${task.exception?.message}")
                     }
-                    val intent = Intent(this, HomeActivity::class.java)
-                    startActivity(intent)
+                    val intent = Intent(this, DashboardActivity::class.java)
+                    //val intent = Intent(this, HomeActivity::class.java)                    startActivity(intent)
                 } else {
                     Toast.makeText(
                         baseContext, "Erro ao criar usuário: ${task.exception?.message}",
