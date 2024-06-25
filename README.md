@@ -28,7 +28,7 @@ Utiliza APIs gratuitas e serviços da AWS para fornecer dados em tempo real e pr
 - **Plataforma:** Android
 - **APIs Utilizadas:** 
   - [Firebase]().
-  - [API Global Fishing Watch]() para monitorar a atividade de pesca.
+  - [API Global Fishing Watch]() da [Global Fishing Watch](https://globalfishingwatch.org/) para monitorar a atividade de pesca.
   - [API da Ocean Biogeographic Information System - OBIS](https://obis.org/), [Swagger OBIS](https://api.obis.org/) e [documentação](https://manual.obis.org/access) para obter dados sobre espécies marinhas, para identificar ou ajudar na identificação/avistamento de espécies em perigo.
 - **Serviços da AWS:** Utilizados para armazenamento e processamento de dados, como:
   - [AWS Cognito]() para autenticação, configuramos um pool de usuários no AWS Cognito.
